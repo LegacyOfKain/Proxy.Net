@@ -11,10 +11,19 @@
 		<Authors>Priyanku_Biswas</Authors>
 		<Company>Priyanku_Biswas</Company>
 		<Description>Lightweight Proxy Server</Description>
+		<PackageTags>Proxy CSharp Dotnet</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/LegacyOfKain/Proxy.Net</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/LegacyOfKain/Proxy.Net</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>icon.png</PackageIcon>
+		<Copyright>Copyright © $([System.DateTime]::Now.Year) Priyanku Biswas</Copyright>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\icon.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 </Project>
