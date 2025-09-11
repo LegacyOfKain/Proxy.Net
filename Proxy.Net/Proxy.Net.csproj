@@ -1,9 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<!-- NuGet package metadata -->
+		<PackageId>Proxy.Net</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Priyanku_Biswas</Authors>
+		<Company>Priyanku_Biswas</Company>
+		<Description>Lightweight Proxy Server</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/LegacyOfKain/Proxy.Net</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/LegacyOfKain/Proxy.Net</PackageProjectUrl>
+	</PropertyGroup>
 
 </Project>
