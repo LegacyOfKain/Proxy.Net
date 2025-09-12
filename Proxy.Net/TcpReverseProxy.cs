@@ -102,7 +102,7 @@ public class TcpReverseProxy
                 }
 
                 var remoteAddress = ((IPEndPoint)client1.Client.RemoteEndPoint!).Address.ToString();
-                Console.WriteLine("Accepted session from " + remoteAddress);
+                //Console.WriteLine("Accepted session from " + remoteAddress);
 
                 var handlerTask = HandleClientAsync(client1, remoteAddress, token);
                 clientTasks.Add(handlerTask);
@@ -124,7 +124,7 @@ public class TcpReverseProxy
         {
             client2 = new TcpClient();
             await client2.ConnectAsync(remoteServerHost, remoteServerPort, token);
-            Console.WriteLine("Created connection to " + remoteServerHost + ":" + remoteServerPort);
+            //Console.WriteLine("Created connection to " + remoteServerHost + ":" + remoteServerPort);
 
             var stream1 = client1.GetStream();
             var stream2 = client2.GetStream();
@@ -174,15 +174,15 @@ public class TcpReverseProxy
 
                 await stream2.WriteAsync(buffer, 0, len, token);
                 await stream2.FlushAsync(token);
-                Console.WriteLine($"Proxied {len} bytes from {stream1name} to {stream2name}");
+                //Console.WriteLine($"Proxied {len} bytes from {stream1name} to {stream2name}");
             }
         }
         catch (OperationCanceledException) { }
         catch (IOException) { }
         catch (ObjectDisposedException) { }
-        catch (Exception)
+        catch (Exception e)
         {
-            Console.WriteLine("Stream from " + stream1name + " to " + stream2name + " closed");
+            Console.WriteLine("Stream from " + stream1name + " to " + stream2name + $" closed due to {e.Message}\n{e.StackTrace}");
         }
     }
 
