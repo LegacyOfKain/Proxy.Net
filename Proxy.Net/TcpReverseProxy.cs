@@ -66,6 +66,8 @@ public class TcpReverseProxy
         Console.WriteLine($"Stopped.  {DateTime.Now}");
     }
 
+    public void Stop() => this.StopAsync().GetAwaiter().GetResult();
+
     private async Task AcceptLoopAsync(CancellationToken token)
     {
         try
