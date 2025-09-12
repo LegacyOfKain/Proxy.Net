@@ -7,7 +7,7 @@
 
 		<!-- NuGet package metadata -->
 		<PackageId>Proxy.Net</PackageId>
-		<Version>1.0.20</Version>
+		<Version>1.0.21</Version>
 		<Authors>Priyanku_Biswas</Authors>
 		<Company>Priyanku_Biswas</Company>
 		<Description>Lightweight Proxy Server</Description>
